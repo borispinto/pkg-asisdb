@@ -1,0 +1,6 @@
+# ==============================================================================
+# Dependencias para Desarrollo y Testing (Suite de Pruebas Automatizadas)
+# ==============================================================================
+-r requirements.txt
+
+pytest>=8.0.0

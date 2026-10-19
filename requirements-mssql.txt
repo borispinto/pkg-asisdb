@@ -1,0 +1,8 @@
+# ==============================================================================
+# Conectores para Microsoft SQL Server (Entorno Estándar Asisnet)
+# Soporte para ODBC nativo (pyodbc) y conexión directa TDS (pymssql)
+# ==============================================================================
+-r requirements.txt
+
+pyodbc>=5.0.0
+pymssql>=2.3.0

@@ -1,0 +1,17 @@
+# ==============================================================================
+# Dependencias base de asisdb (Núcleo Agnóstico / SQLite y FoxPro DBF)
+# ==============================================================================
+SQLAlchemy>=2.0.0
+dbfread>=2.0.7
+
+# ==============================================================================
+# Internacionalización (pkg-i18n)
+# ==============================================================================
+# Opción 1: Desarrollo local en caliente (modo editable)
+-e ../pkg-i18n
+
+# Opción 2: Instalación directa desde GitHub (Producción / CI/CD)
+# pkg-i18n @ git+https://github.com/borispinto/pkg-i18n.git
+
+# Opción 3: Distribución estándar (PyPI / Índice de paquetes - Canónica activa)
+#pkg-i18n>=1.0.0

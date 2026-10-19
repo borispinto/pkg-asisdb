@@ -1,0 +1,102 @@
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: 2026 ASISNET Computación, CA <proyectos@asisnet.net>
+# SPDX-FileCopyrightText: 2026 Boris Pinto <borispinto@gmail.com>
+# Autor: Boris Pinto <borispinto@gmail.com>
+# File: pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkg-asisdb"
+version = "1.0.0"
+description = "Capa de abstracción y gestión de conexiones a bases de datos multi-motor"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+# 1. Tu marca personal como Autor Principal
+authors = [
+    { name = "Boris Pinto", email = "borispinto@gmail.com" }
+]
+
+# 2. Tu empresa como el canal oficial de Soporte y Negocios
+maintainers = [
+    { name = "ASISNET Computación, CA", email = "proyectos@asisnet.net" }
+]
+
+keywords = [
+    "database",
+    "sqlalchemy",
+    "pyodbc",
+    "dbf",
+    "base de datos",
+    "motores sql",
+    "foxpro",
+    "asisnet"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+dependencies = [
+    "SQLAlchemy>=2.0.0",
+    "dbfread>=2.0.7",
+    "pkg-i18n>=1.0.0"
+]
+
+[project.optional-dependencies]
+mssql = [
+    "pyodbc>=5.0.0",
+    "pymssql>=2.3.0",
+]
+postgres = [
+    "psycopg2-binary>=2.9.0",
+]
+mysql = [
+    "pymysql>=1.1.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+all = [
+    "pyodbc>=5.0.0",
+    "pymssql>=2.3.0",
+    "psycopg2-binary>=2.9.0",
+    "pymysql>=1.1.0",
+    "pytest>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://www.asisnet.net"
+Repository = "https://github.com/borispinto/pkg-asisdb"
+Issues = "https://github.com/borispinto/pkg-asisdb/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["asisdb*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.sql"]
+
+[tool.pyright]
+extraPaths = [
+    "../PKG-i18n",
+    "."
+]
+

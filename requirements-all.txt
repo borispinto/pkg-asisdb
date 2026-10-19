@@ -1,0 +1,7 @@
+# ==============================================================================
+# Instalación Completa de asisdb (Todos los Motores y Suite de Pruebas)
+# ==============================================================================
+-r requirements-mssql.txt
+-r requirements-postgres.txt
+-r requirements-mysql.txt
+-r requirements-dev.txt
